@@ -26,16 +26,23 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
     <style type="text/css">
-td
-{
-    padding:0 15px 0 15px;
-}
-</style>
+        .h1input
+        {
+            display: block; font-size: 2em;
+            margin-top: 0.67em;
+            margin-bottom: 0.67em;
+            margin-left: 0;
+            margin-right: 0;
+            font-weight: bold;
+            padding:25px 10px 25px 10px
+        }
+    </style>
 
 </head>
 
-<body>
+<body onload="startTime()">
 
     <div id="wrapper">
 
@@ -164,7 +171,7 @@ td
                     <li>
                         <a href="gudang.html"><i class="fa fa-fw fa-institution"></i> Gudang</a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="pegawai.html"><i class="fa fa-fw fa-users"></i> Pegawai</a>
                     </li>
                     <li>
@@ -173,7 +180,7 @@ td
                     <li>
                         <a href="pelanggan.html"><i class="fa fa-fw fa-smile-o"></i> Pelanggan</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="hutang_piutang.html"><i class="fa fa-fw fa-dollar"></i> Hutang Piutang</a>
                     </li>
                     <li>
@@ -218,43 +225,108 @@ td
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Data Pegawai
+                            Hutang Piutang
                         </h1>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-users"></i> Pegawai
+                                <i class="fa fa-dollar"></i> Hutang Piutang
                             </li>
                         </ol>
                     </div>
                 </div>
                 <!-- /.row -->
 
-                <!-- Search Bar -->
+<!-- Hutang Pelanggan -->
                 <div class="row">
-                    <div class="col-lg-4">
-                        <div id="custom-search-input" style="margin-bottom:20px">
-                            <div class="input-group col-md-12">
-                                <input type="text" class="form-control input-lg" placeholder="ID Pegawai" />
-                                <span class="input-group-btn">
-                                    <button class="btn btn-info btn-lg" type="button">
-                                        <i class="glyphicon glyphicon-search"></i>
-                                    </button>
-                                </span>
+                    <div class="col-lg-12">
+                        <div class="panel-red">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-dollar"></i> Hutang Pelanggan</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div>
+                                    <!-- <form class="form-inline"> -->
+                                    <div class="col-lg-4">
+                                        <div id="custom-search-input" style="margin-bottom:20px">
+                                            <div class="input-group col-md-12">
+                                                <input type="text" class="form-control input-md" placeholder="ID Pelanggan" />
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-info btn-md" type="button">
+                                                        <i class="glyphicon glyphicon-search"></i>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Search bar -->
+
+                                    <!-- <div class="col-lg-8"><div class="form-group">
+                                        <label style="font-size:30px">Total Hutang : </label>
+                                        <input type="text" class="form-control h1input" disabled>
+                                    </div></div></form> -->
+
+                                    <div class="flot-chart-content table-resposive">
+                                        <table class="table table-bordered table-hover table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>No.</th>
+                                                    <th>Nomor Transaksi</th>
+                                                    <th>Nama Pelanggan</th>
+                                                    <th>Tanggal Transaksi</th>
+                                                    <th>Jumlah Hitung</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
+                                                </tr>
+                                               <tr>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="text-center">
+                                            <button class="btn btn-lg btn-grey" style="width:150px">Cetak</button>
+                                        </div>
+                                    </div>    
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- /.row -->
+                <!-- /.row -->    
 
-<!-- Data Barang -->
+<!-- Piutang Pelanggan -->
                 <div class="row">
-                    <div class="col-lg-6">
-                        <div class="panel panel-blue">
+                    <div class="col-lg-12">
+                        <div class="panel-green">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-table"></i> Data Pegawai</h3>
+                                <h3 class="panel-title"><i class="fa fa-dollar"></i> Piutang Pelanggan</h3>
                             </div>
                             <div class="panel-body">
                                 <div>
@@ -262,29 +334,25 @@ td
                                         <table class="table">
                                             <tbody>
                                                 <tr>
-                                                    <td>ID Pegawai</td>
+                                                    <td>ID Pelanggan</td>
                                                     <td>:</td>
-                                                    <td><input type="text" class="form-control" disabled></td>
+                                                    <td><input type="text" class="form-control"></td>
+                                                    <td>No. Transaksi</td>
+                                                    <td>:</td>
+                                                    <td><input type="text" class="form-control"></td>
                                                 </tr>
                                                <tr>
-                                                    <td>Nama Pegawai</td>
+                                                    <td>Tanggal Pembayaran</td>
                                                     <td>:</td>
-                                                    <td><input type="text" class="form-control" disabled></td>
+                                                    <td><input type="text" class="form-control"></td>
+                                                    <td>Total Pembayaran (Rp)</td>
+                                                    <td>:</td>
+                                                    <td><input type="text" class="form-control"></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Jabatan</td>
-                                                    <td>:</td>
-                                                    <td><input type="text" class="form-control" disabled></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Alamat</td>
-                                                    <td>:</td>
-                                                    <td><textarea type="text" class="form-control" disabled></textarea></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Gaji (Rp)</td>
-                                                    <td>:</td>
-                                                    <td><input type="text" class="form-control" disabled></td>
+                                                    <td colspan="6" align="right">
+                                                        <button class="btn btn-lg btn-grey" style="width:150px">Selesai</button>
+                                                    </td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -293,61 +361,82 @@ td
                             </div>
                         </div>
                     </div>
+                </div>
+                <!-- /.row -->   
 
-<!-- Input Data -->
-                    <div class="col-lg-6">
-                        <div class="panel panel-yellow">
+<!-- Histori Pembayaran -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel-yellow">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Input Data Pegawai</h3>
+                                <h3 class="panel-title"><i class="fa fa-dollar"></i> Histori Pembayaran</h3>
                             </div>
-                            <div class="panel-body"><form>
+                            <div class="panel-body">
                                 <div>
-                                    <div class="table-responsive flot-chart-content">
-                                        <table class="table">
+                                    <div class="col-lg-4">
+                                        <div id="custom-search-input" style="margin-bottom:20px">
+                                            <div class="input-group col-md-12">
+                                                <input type="text" class="form-control input-md" placeholder="ID Pelanggan" />
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-info btn-md" type="button">
+                                                        <i class="glyphicon glyphicon-search"></i>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flot-chart-content table-resposive">
+                                        <table class="table table-bordered table-hover table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>No.</th>
+                                                    <th>Nomor Transaksi</th>
+                                                    <th>Nama Pelanggan</th>
+                                                    <th>Tanggal Transaksi</th>
+                                                    <th>Jumlah Hitung</th>
+                                                </tr>
+                                            </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>ID Pegawai</td>
-                                                    <td>:</td>
-                                                    <td><input type="text" class="form-control"></td>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
                                                 </tr>
                                                <tr>
-                                                    <td>Nama Pegawai</td>
-                                                    <td>:</td>
-                                                    <td><input type="text" class="form-control"></td>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Jabatan</td>
-                                                    <td>:</td>
-                                                    <td><input type="text" class="form-control"></td>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Alamat</td>
-                                                    <td>:</td>
-                                                    <td><textarea type="text" class="form-control"></textarea></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Gaji (Rp)</td>
-                                                    <td>:</td>
-                                                    <td><input type="text" class="form-control"></td>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
+                                                    <td>aaaaa</td>
                                                 </tr>
                                             </tbody>
                                         </table>
-                                    </div>
-                                </div>
-                                <div class="text-center">
-                                    <table align="center">
-                                        <tr>
-                                            <td><button class="btn btn-lg btn-danger">Batal</button></td>
-                                            <td><button class="btn btn-lg btn-success">Selesai</button></td>
-                                        </tr>
-                                    </table>
+                                        <div class="text-center">
+                                            <button class="btn btn-lg btn-grey" style="width:150px">Cetak</button>
+                                        </div>
+                                    </div>    
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- /.row -->
-
+                <!-- /.row -->                                             
 
             </div>
             <!-- /.container-fluid -->
@@ -363,6 +452,9 @@ td
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- My JavaSript -->
+    <script src="js/time.js"></script>
 
 </body>
 
